@@ -7,7 +7,7 @@ Even though Huggingface does a great job in displaying the dataset through the d
 
 I believe, most of the time, we try to interpret benchmark results as if the data distribution is uniform. But this is not always the case. 
 
-In order to make it easier for me to interpret the results section in research papers, I thought of making a simple tool to compute the data distribution, and along with it, a simple public webpage to show the distribution, majority class accuracy, uniform random accuracy and proportional random accuracy for reference. Link to [LM Benchmark Transparency GitHub page](https://xwong22.github.io/lm_data_transparency/)
+In order to make it easier for me to interpret the results section in research papers, I thought of making a simple tool to compute the data distribution, and along with it, a simple public webpage to show the distribution, majority class accuracy, uniform random accuracy and proportional random accuracy for reference. Link to [LM Benchmark Transparency webpage](https://xwong22.github.io/lm_data_transparency/). 
 
 Since a lot of the LM benchmarks are limited in a few choices, we can easily calculate the distribution and the expected accuracies for these benchmarks.
 
