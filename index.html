@@ -44,9 +44,39 @@
                             <th>Total Examples</th>
                             <th>Classes</th>
                             <th>Distribution</th>
-                            <th>Majority Class Acc</th>
-                            <th>Uniform Random Acc</th>
-                            <th>Proportional Random Acc</th>
+                            <th>
+                                <span>Majority Class Acc</span>
+                                <div class="tooltip-wrapper">
+                                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <div class="tooltip">Accuracy if a model simply predicts the most frequent class in the dataset.</div>
+                                </div>
+                            </th>
+                            <th>
+                                <span>Uniform Random Acc</span>
+                                <div class="tooltip-wrapper">
+                                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <div class="tooltip">Expected accuracy if a model makes completely random guesses uniformly across all available classes (1 / Number of Classes).</div>
+                                </div>
+                            </th>
+                            <th>
+                                <span>Proportional Random Acc</span>
+                                <div class="tooltip-wrapper">
+                                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                    </svg>
+                                    <div class="tooltip">Expected accuracy if a model randomly guesses according to the actual class distribution probabilities in the dataset.</div>
+                                </div>
+                            </th>
                         </tr>
                     </thead>
                     <tbody id="table-body">

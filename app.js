@@ -18,8 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const dist = JSON.parse(distStr);
             let html = '<div class="dist-tag-container">';
             
-            // Sort keys by highest value or just keep original order
-            const entries = Object.entries(dist);
+            // Sort keys by highest value parsing the number out of "303 (25.85%)"
+            const entries = Object.entries(dist).sort((a, b) => {
+                const countA = parseInt(a[1].split(' ')[0]);
+                const countB = parseInt(b[1].split(' ')[0]);
+                return countB - countA; // Descending
+            });
             
             for (const [key, val] of entries) {
                 // val is a string like "303 (25.85%)"
