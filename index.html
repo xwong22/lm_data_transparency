@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LM Eval Benchmark Transparency</title>
+    <meta name="description" content="A transparent view into the data distribution and baseline accuracy of different Language Model evaluation benchmarks.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PapaParse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="background-mesh"></div>
+    <div class="container">
+        <header>
+            <h1>LM Benchmark Transparency</h1>
+            <p>Explore data distributions, majority-class baselines, and random expected accuracies across various language modeling benchmarks.</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="search-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search benchmarks...">
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="benchmark-table" class="hidden">
+                    <thead>
+                        <tr>
+                            <th>Benchmark</th>
+                            <th>Total Examples</th>
+                            <th>Classes</th>
+                            <th>Distribution</th>
+                            <th>Majority Class Acc</th>
+                            <th>Uniform Random Acc</th>
+                            <th>Proportional Random Acc</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Data will be dynamically rendered here -->
+                    </tbody>
+                </table>
+                <div id="loading" class="state-message">
+                    <div class="spinner"></div>
+                    <p>Loading benchmark data...</p>
+                </div>
+                <div id="no-results" class="state-message hidden">
+                    <svg viewBox="0 0 24 24" fill="none" class="empty-icon" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <p>No benchmarks found matching your search.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <p>Published on GitHub Pages. Data auto-generated from dataset analysis.</p>
+    </footer>
+
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
